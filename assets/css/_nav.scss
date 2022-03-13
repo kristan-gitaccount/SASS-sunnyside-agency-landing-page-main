@@ -1,0 +1,23 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px ;
+    
+}
+
+.nav-items-container{
+    display: none;
+}
+
+.nav-items{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    top: 10%;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.nav-list{
+    padding: 10px 0;
+}

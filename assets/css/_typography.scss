@@ -1,0 +1,77 @@
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.header-title > h1 {
+  font-size: 5vh;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+.row-3-content > h2,
+.row-3-content > p {
+  color: $c-dark-desaturated-cyan;
+}
+
+.container-row-5 > h2 {
+  margin: 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: $c-dark-grayish-blue;
+}
+
+.client-details > h3 {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.client-details >p{
+    color: $c-very-dark-grayish-blue;
+}
+
+.row-5-content p {
+  line-height: 2;
+}
+
+.row-1-content > p,
+.row-2-content > p,
+.row-3-content > p,
+.row-4-content > p,
+.row-5-content > p{
+  margin: 2vh 1.5vh;
+  line-height: 2;
+  padding: 10px;
+}
+
+.row-1-content > a,
+.row-2-content > a {
+  padding: 0 5px;
+  font-size: 16px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.row-1-content > a {
+  border-bottom: 5px solid $c-yellow;
+}
+
+.row-2-content > a {
+  border-bottom: 5px solid $c-soft-red;
+}
+
+
+.footer-nav-links {
+  color: $c-dark-desaturated-cyan;
+  font-size: $font-size;
+  font-family: "Fraunces", serif;
+}

@@ -1,0 +1,182 @@
+@import "variables";
+@import "nav";
+@import "mixins";
+@import "typography";
+
+* {
+  @include spacing;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.line-break {
+  display: block;
+}
+
+// header
+header {
+  background: center/100% 100% no-repeat
+    url("../images/mobile/image-header.jpg");
+  width: 100%;
+  height: 70%;
+  position: relative;
+
+  .header-content {
+    @include flexbox-column;
+    justify-content: space-between;
+    text-align: center;
+    height: 50%;
+    margin-top: 5vh;
+
+    .header-title {
+      color: $c-white;
+      margin-top: 5vh;
+    }
+  }
+}
+
+// end header
+
+// main
+
+// row 1
+.row-1-img {
+  img {
+    @include height-width;
+  }
+}
+
+.row-1-content {
+  text-align: center;
+  padding: 10px;
+  margin: 5vh 0;
+}
+
+// row 2
+.row-2-img {
+  img {
+    @include height-width;
+  }
+}
+.row-2-content {
+  text-align: center;
+  padding: 10px;
+  margin: 5vh 0;
+}
+// row 3
+
+.container-row-3 {
+  position: relative;
+
+  .row-3-img {
+    img {
+      @include height-width;
+    }
+  }
+  .row-3-content {
+    @include row-content-absolute;
+  }
+}
+
+// row 4
+
+.container-row-4 {
+  margin-top: -10px;
+  position: relative;
+
+  .row-4-content {
+    @include row-content-absolute;
+    color: $c-dark-blue;
+  }
+
+  .row-4-img {
+    img {
+      @include height-width;
+    }
+  }
+}
+
+// row 5
+.container-row-5 {
+  @include flexbox-column;
+  text-align: center;
+  margin: 20px 0;
+
+  .row-5-content {
+    @include flexbox-column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 400px;
+
+    img {
+      border-radius: 50%;
+      height: 100px;
+    }
+  }
+}
+
+// row 6
+.container-row-6 {
+  display: grid;
+  grid-template-areas:
+    "one two"
+    "three four";
+
+  .row-6-img {
+    img {
+      @include height-width;
+    }
+    .one {
+      grid-area: one;
+    }
+    .two {
+      grid-area: two;
+    }
+
+    .three {
+      grid-area: three;
+    }
+    .four {
+      grid-area: four;
+    }
+  }
+}
+// end main
+
+// footer
+footer {
+  background-color: $c-light-moderate-cyan;
+  @include flexbox-column;
+  align-items: center;
+  justify-content: space-around;
+  height: 300px;
+  padding: 20px;
+
+  // footer nav items
+  .footer-nav-items-container {
+    width: 100%;
+    margin: 20px 0;
+
+    .footer-nav-items {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  // footer social media icons
+  .footer-social-icons-container {
+    width: 100%;
+
+    .footer-social-icons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer-icon-list {
+      margin: 20px 10px;
+    }
+  }
+}
