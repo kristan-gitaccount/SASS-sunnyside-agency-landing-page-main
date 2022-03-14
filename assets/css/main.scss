@@ -16,7 +16,7 @@ body {
   display: block;
 }
 
-// header
+// header section
 header {
   background: center/100% 100% no-repeat
     url("../images/mobile/image-header.jpg");
@@ -40,113 +40,117 @@ header {
 
 // end header
 
-// main
-
-// row 1
-.row-1-img {
-  img {
-    @include height-width;
-  }
-}
-
-.row-1-content {
-  text-align: center;
-  padding: 10px;
-  margin: 5vh 0;
-}
-
-// row 2
-.row-2-img {
-  img {
-    @include height-width;
-  }
-}
-.row-2-content {
-  text-align: center;
-  padding: 10px;
-  margin: 5vh 0;
-}
-// row 3
-
-.container-row-3 {
-  position: relative;
-
-  .row-3-img {
+// main section
+main {
+  // row 1 container
+  .row-1-img {
     img {
       @include height-width;
     }
   }
-  .row-3-content {
-    @include row-content-absolute;
-  }
-}
 
-// row 4
-
-.container-row-4 {
-  margin-top: -10px;
-  position: relative;
-
-  .row-4-content {
-    @include row-content-absolute;
-    color: $c-dark-blue;
+  .row-1-content {
+    text-align: center;
+    padding: 10px;
+    margin: 5vh 0;
   }
 
-  .row-4-img {
+  // row 2 container
+  .row-2-img {
     img {
       @include height-width;
     }
   }
-}
+  .row-2-content {
+    text-align: center;
+    padding: 10px;
+    margin: 5vh 0;
+  }
 
-// row 5
-.container-row-5 {
-  @include flexbox-column;
-  text-align: center;
-  margin: 20px 0;
+  // row 3 container
 
-  .row-5-content {
+  .container-row-3 {
+    position: relative;
+
+    .row-3-img {
+      img {
+        @include height-width;
+      }
+    }
+    .row-3-content {
+      @include row-content-absolute(10%);
+    }
+  }
+
+  // row 4 container
+
+  .container-row-4 {
+    margin-top: -10px;
+    position: relative;
+
+    .row-4-content {
+      @include row-content-absolute(10%);
+      color: $c-dark-blue;
+    }
+
+    .row-4-img {
+      img {
+        @include height-width;
+      }
+    }
+  }
+
+  // row 5 container
+
+  .container-row-5 {
     @include flexbox-column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 400px;
+    text-align: center;
+    margin: 20px 0;
 
-    img {
-      border-radius: 50%;
-      height: 100px;
+    .row-5-content {
+      @include flexbox-column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 400px;
+
+      img {
+        border-radius: 50%;
+        height: 100px;
+      }
+    }
+  }
+
+  // row 6 container
+
+  .container-row-6 {
+    display: grid;
+    grid-template-areas:
+      "one two"
+      "three four";
+
+    .row-6-img {
+      img {
+        @include height-width;
+      }
+      .one {
+        grid-area: one;
+      }
+      .two {
+        grid-area: two;
+      }
+
+      .three {
+        grid-area: three;
+      }
+      .four {
+        grid-area: four;
+      }
     }
   }
 }
+// end main section
 
-// row 6
-.container-row-6 {
-  display: grid;
-  grid-template-areas:
-    "one two"
-    "three four";
-
-  .row-6-img {
-    img {
-      @include height-width;
-    }
-    .one {
-      grid-area: one;
-    }
-    .two {
-      grid-area: two;
-    }
-
-    .three {
-      grid-area: three;
-    }
-    .four {
-      grid-area: four;
-    }
-  }
-}
-// end main
-
-// footer
+// footer section
 footer {
   background-color: $c-light-moderate-cyan;
   @include flexbox-column;
@@ -178,5 +182,59 @@ footer {
     .footer-icon-list {
       margin: 20px 10px;
     }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-laptop) {
+  main {
+    // .section-one-container {
+      
+      // grid-template-areas:
+      //   "one two"
+      //   "three four"
+      //   "five six";
+
+      .container-row-4 {
+        margin-top: 0px;
+      }
+
+     
+
+      img {
+        height: 400px;
+      }
+
+      .container-row-1 {
+        display: flex;
+      .row-1-img {
+        flex-basis: 50%;
+        }
+
+      .row-1-content {
+        flex-basis: 50%;
+      }
+    }
+
+      .row-2-img {
+        grid-area: three;
+      }
+
+      .row-2-content {
+        grid-area: four;
+        margin-top: 0px;
+      }
+      .row-3-img {
+        grid-area: five;
+        img {
+          height: 500px;
+        }
+      }
+      .row-4-img {
+        grid-area: six;
+        img {
+          height: 500px;
+        }
+      }
+    // }
   }
 }

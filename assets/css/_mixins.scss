@@ -27,8 +27,11 @@
   margin: 5vh 0;
 }
 
-@mixin row-content-absolute {
+@mixin row-content-absolute($bottom) {
   position: absolute;
-  bottom: 10%;
+  bottom: $bottom;
   text-align: center;
 }
+
+
+
