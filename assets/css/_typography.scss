@@ -75,3 +75,11 @@ p {
   font-size: $font-size;
   font-family: "Fraunces", serif;
 }
+
+@media only screen and (min-width: $breakpoint-laptop) {
+
+footer{
+  font-size: 20px;
+}
+
+}

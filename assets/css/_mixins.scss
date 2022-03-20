@@ -6,15 +6,12 @@
   list-style: none;
 }
 
-@mixin flexbox-column {
+@mixin flexbox($direction) {
   display: flex;
-  flex-direction: column;
+  flex-direction: $direction;
 }
 
-@mixin flexbox-row {
-  display: flex;
-  flex-direction: row;
-}
+
 
 @mixin height-width {
   height: 100%;
