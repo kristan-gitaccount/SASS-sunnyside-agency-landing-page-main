@@ -11,8 +11,6 @@
   flex-direction: $direction;
 }
 
-
-
 @mixin height-width {
   height: 100%;
   width: 100%;
@@ -29,6 +27,3 @@
   bottom: $bottom;
   text-align: center;
 }
-
-
-

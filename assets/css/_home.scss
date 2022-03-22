@@ -191,6 +191,16 @@ footer {
 }
 
 @media only screen and (min-width: $breakpoint-laptop) {
+  .line-break {
+    display: inline-block;
+  }
+
+  // header section
+  header {
+    background: center/100% 100% no-repeat
+      url("../images/desktop/image-header.jpg");
+    height: 100%;
+  }
   main {
     .container-row-4 {
       margin-top: 0px;
