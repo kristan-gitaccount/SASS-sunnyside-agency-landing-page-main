@@ -30,6 +30,6 @@ Users should be able to:
 - Mobile-first workflow
 
 ## Author
-- Frontend Mentor - @kristan-gitaccount
+- Frontend Mentor - https://www.frontendmentor.io/profile/kristan-gitaccount
 
 
