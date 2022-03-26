@@ -14,7 +14,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](/solution_output/desktop.png)
+
+![](/solution_output/mobile.png)
+
 
 
 
